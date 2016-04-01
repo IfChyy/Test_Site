@@ -27,8 +27,11 @@ body{
 }
 
 #beer{
-    background: grey;
-    border: 2px solid yellow;
+    background-image:url(border.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: 3px solid darkgoldenrod;
     border-radius: 25px;
     height: 90%;
     width: 20%;
@@ -65,8 +68,8 @@ body{
     width:17%;
     height:90%;
     float: right;
-    background: darkgray;
-    border: 2px solid yellow;
+    background-image:url(border.png);
+    border: 3px solid darkgoldenrod;
     border-radius: 25px;
     padding: 15px 0px 15px 0px;
     margin-right: 2%;
