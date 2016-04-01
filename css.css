@@ -3,7 +3,6 @@ body{
     background-image:url(black.jpg);
     background-repeat: no-repeat;
     background-size:cover;
-
 }
 
 
@@ -36,7 +35,6 @@ body{
     float:left;
     margin:0;
     color: white;
-
 }
 
 #beer ul{
@@ -46,11 +44,10 @@ body{
 }
 
 #map{
-    width:58%;
+    width:40%;
     height:90%;
     float:left;
     padding-left: 5px;
-
 }
 
 #bars{
@@ -69,6 +66,42 @@ body{
 }
 
 
+#logo{
+    margin-top: 2%;
+    width: 15%;
+    display: inline-block;
+    margin-left: 43%;
+    margin-right: auto;
+    margin-bottom: 3%;
+}
+
+@media screen and (min-width: 1700px) {
+
+    #beer{
+        margin-left: 5%;
+    }
+
+    #bars{
+        height: 90%;
+        width: 20%;
+        margin-right: 5%;
+    }
+
+    #bars img{
+        padding-left: 20%;
+    }
+
+    #map{
+        margin-top: 1%;
+        margin-left: 6%;
+    }
+
+    #share{
+        float: right;
+        margin-right: 5%;
+        margin-top: 3%;
+    }
 
 
 
+}
