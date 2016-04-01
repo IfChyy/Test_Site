@@ -1,10 +1,11 @@
-
+/*Changing the background of the page*/
 body {
 	background-size:cover;
 	background-image:url(black.jpg);
 	background-repeat: no-repeat;
 }
 
+/*Centering the content of the page*/
 #wrapper{
 	margin-left: 25%;
 	margin-right: 25%;
@@ -12,6 +13,7 @@ body {
 	margin-top: 5%;
 }
 
+/*Centering the logo*/
 img {
 	width: 60%;
 	display: block;
@@ -19,6 +21,7 @@ img {
 	margin-right: auto;
 }
 
+/*Formatting the text of teh page*/
 #text1{
 	margin: 48px 0px 32px 32px;
 	font-family:"Helvetica", Arial, sans-serif;
@@ -26,11 +29,13 @@ img {
 	font-size: 24px;
 }
 
+/*Leaving some space between the logo and the warning message*/
 #warning{
 	margin-top: 3%;
 	text-align: center;
 }
 
+/*Styling and positioning the "Enter" button*/
 #enter_button {
 	border: 2px solid;
 	border-radius:25px;
@@ -39,19 +44,15 @@ img {
 	background-image:url(green1.jpg);
 }
 
+/*Styling and positioning the "Exit" button*/
 #exit_button {
 	border: 2px solid;
 	background-image:url('red.jpg');
 	border-radius:25px;
 	margin-left:3%;
-
-
 }
 
-li {
-	list-style-type: none;
-}
-
+/*Formatting the section for the buttons*/
 #menu{
 	background-repeat:no-repeat;
 	display:block;
@@ -68,7 +69,6 @@ li {
 	padding:0;
 	margin:0;
 	line-height:30px;
-
 }
 
 #menu  li{
@@ -78,6 +78,7 @@ li {
 	float:left;
 }
 
+/*Formatting the text inside the buttons*/
 #menu ul li a{
 	text-align:center;
 	font-family:Arial;
@@ -97,6 +98,7 @@ li {
 	top:50px;
 }
 
+/*Changing the "Exit" button's style when it's hovered*/
 #exit_button a:hover{
 	font-family:Arial;
 	color:black;
@@ -106,6 +108,7 @@ li {
 	background-image:url(lemon2.jpg);
 }
 
+/*Changing the "Enter" button's style when it's hovered*/
 #enter_button a:hover{
 	font-family:Arial;
 	color:black;
@@ -115,6 +118,7 @@ li {
 	background-image:url(hmel.jpg);
 }
 
+/*Centering the page for bigger screen resolutions*/
 @media screen and (min-width: 1700px) {
 
 	#enter_button{
