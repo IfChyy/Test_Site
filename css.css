@@ -54,11 +54,10 @@ body{
 }
 
 #bars{
-
     width:20%;
     height:90%;
     float: left;
-    background: grey;
+    background: darkgray;
 }
 
 #bars ul{
