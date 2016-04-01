@@ -1,21 +1,22 @@
 
 body {
 	background-size:cover;
-    background-image:url(black.jpg);
+	background-image:url(black.jpg);
 	background-repeat: no-repeat;
 }
 
 #wrapper{
-    margin-left: 25%;
-    margin-right: 25%;
-    padding-bottom: 15%;
+	margin-left: 25%;
+	margin-right: 25%;
+	padding-bottom: 15%;
+	margin-top: 5%;
 }
 
 img {
 	width: 60%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #text{
@@ -29,8 +30,8 @@ img {
 }
 
 #warning{
-    margin-top: 3%;
-    text-align: center;
+	margin-top: 3%;
+	text-align: center;
 }
 
 #enter_button {
@@ -46,84 +47,89 @@ img {
 	background-image:url('red.jpg');
 	border-radius:25px;
 	margin-left:3%;
-	
-}
 
-a {
-    text-decoration: none;
-    font-family: Arial;
-    color: white;
-    display: block;
+
 }
 
 li {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 #menu{
-     background-repeat:no-repeat;  
-     display:block;
-	 float:left;
-	 clear:both;
-	 width:100%;
-	 height:20%;
-	 margin:50px 0px 14px 35px;
-	 padding:0;
+	background-repeat:no-repeat;
+	display:block;
+	float:left;
+	clear:both;
+	width:100%;
+	height:20%;
+	margin:50px 0px 14px 35px;
+	padding:0;
 }
 
 #menu ul{
-     list-style:none;
-	 padding:0;
-	 margin:0;
-	 line-height:30px;
-	 
+	list-style:none;
+	padding:0;
+	margin:0;
+	line-height:30px;
+
 }
 
 #menu  li{
-     list-style:none;
-	 padding:0;
-	 position:relative;
-	 float:left;
-	 
+	list-style:none;
+	padding:0;
+	position:relative;
+	float:left;
+
 }
 
 #menu ul li a{
-     text-align:center;
-     font-family:Ariel;
-     text-decoration:none;
-     width:170px;
-     display:block;	
-     color:#aeaeae;	
-     font-size:15px;
-	 font-weight:bold;
-	 padding:10px 30px 10px 30px;
-	 border:0px solid #000; 
+	text-align:center;
+	font-family:Arial;
+	text-decoration:none;
+	width:170px;
+	display:block;
+	color:#aeaeae;
+	font-size:130%;
+	font-weight:bold;
+	padding:10px 30px 10px 30px;
+	border:0px solid #000;
 }
 
 #menu ul ul{
-     position:absolute;
- 	 visibility:hidden;
-     top:50px;
- }
+	position:absolute;
+	visibility:hidden;
+	top:50px;
+}
 
 #exit_button a:hover{
-	font-family:Ariel;
+	font-family:Arial;
 	color:black;
 	border-radius:23px;
 	text-decoration:none;
-	 background-size: 100%;
-     background-image:url(lemon2.jpg);
+	background-size: 100%;
+	background-image:url(lemon2.jpg);
 }
 
 #enter_button a:hover{
-	font-family:Ariel;
+	font-family:Arial;
 	color:black;
 	border-radius:23px;
 	text-decoration:none;
-	 background-size: 100%;
-     background-image:url(hmel.jpg);
+	background-size: 100%;
+	background-image:url(hmel.jpg);
 }
 
+@media screen and (min-width: 1700px) {
 
+	#enter_button{
+		margin-left: 15%;
+	}
+
+	#exit_button{
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+}
 
 
