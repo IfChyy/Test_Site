@@ -1,0 +1,57 @@
+body{
+    background-image:url(black.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+ul{
+  display:inline-block;
+    margin:0;
+    padding:0;
+}
+
+ul li{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+ol{
+    float: left;
+    padding:0;
+    margin:0;
+}
+
+
+#header{
+
+    float:top;
+    width:100%;
+    height:10%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+ }
+
+#beer{
+    height: 90%;
+    width: 20%;
+    float:left;
+    margin:0;
+    color: white;
+
+
+}
+
+#map{
+    width:60%;
+    hight:90%;
+    float:left;
+}
+
+#bars{
+    width:20%;
+    hight:90%;
+    float: left;
+}
