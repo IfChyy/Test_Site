@@ -109,3 +109,36 @@ body{
 
 
 }
+
+@media screen and (min-width: 1368px) {
+
+    #beer{
+        margin-left: 2%;
+    }
+
+    #bars{
+        height: 90%;
+        width: 20%;
+        margin-right: 2%;
+    }
+
+    #bars img{
+        padding-left: 18%;
+    }
+    #beer-descriptions article{
+        margin-top: 30%;
+    }
+    #map{
+        margin-top: 1%;
+        margin-left: 6%;
+    }
+
+    #share{
+        float: right;
+        margin-right: 5%;
+        margin-top: 3%;
+    }
+
+
+
+}
