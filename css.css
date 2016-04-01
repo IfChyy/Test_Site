@@ -1,3 +1,4 @@
+
 body{
     background-image:url(black.jpg);
     background-repeat: no-repeat;
@@ -46,12 +47,12 @@ ol{
 
 #map{
     width:60%;
-    hight:90%;
+    height:90%;
     float:left;
 }
 
 #bars{
     width:20%;
-    hight:90%;
+    height:90%;
     float: left;
 }
