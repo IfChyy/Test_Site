@@ -56,4 +56,10 @@ body{
     width:20%;
     height:90%;
     float: left;
+    background: grey;
+}
+
+#bars ul{
+    border: 2px solid yellow;
+    background: grey;
 }
