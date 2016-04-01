@@ -46,12 +46,15 @@ ol{
 }
 
 #map{
-    width:60%;
+    width:58%;
     height:90%;
     float:left;
 }
 
 #bars{
+    padding-left:1%;
+    background-color: #aeaeae;
+    border-radius:25px;
     width:20%;
     height:90%;
     float: left;
