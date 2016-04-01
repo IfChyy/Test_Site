@@ -57,6 +57,10 @@ body{
     margin-left: 6%;
 }
 
+#map img {
+    width: 110%;
+}
+
 #bars{
     width:17%;
     height:90%;
@@ -66,13 +70,11 @@ body{
     border-radius: 25px;
     padding: 15px 0px 15px 0px;
     margin-right: 2%;
-
-
 }
+
 #bars img{
     padding-left: 35px;
 }
-
 
 #logo{
     margin-top: 2%;
@@ -107,6 +109,11 @@ body{
     #map{
         margin-top: 1%;
         margin-left: 6%;
+
+    }
+
+    #map img {
+        width: 92%;
     }
 
     #share{
@@ -118,7 +125,6 @@ body{
     #beer-descriptions article {
         margin-top: 29%;
     }
-
 
 
 }
