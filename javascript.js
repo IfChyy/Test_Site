@@ -18,19 +18,46 @@ window.fbAsyncInit = function() {
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
+function initialize() {
+    var mapProp = {
+        center:new google.maps.LatLng(57.148080, -2.094816),
+        zoom:13,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+    var map=new google.maps.Map(document.getElementById("map"), mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $(document).ready(function(){
     $('.fb-share-button').click(function(d){
         d.preventDefault();
         FB.ui(
             {
-                method: 'feed',
-                name: 'This is the content of the "name" field.',
-                link: 'http://group-o.azurewebsites.net/',
+                name: 'AAAAAAAAAAAAAAAA',
+                link: 'http://google.com',
                 picture: 'http://group-o.azurewebsites.net/cheers_logo.png’',
                 caption: 'Top 3 reasons why you should care about your finance',
-                description: 'Q SE SHIBAI BE SIME ',
-                message: ' EBASI MAIKATAAAAAA'
+                description: "Q SE SHIBAI BE SIME ",
+                message: ' EBASI MAIKATAAAAAA',
             });
     });
 });
