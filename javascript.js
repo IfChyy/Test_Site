@@ -108,7 +108,7 @@ function initMap() {
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch({
         location: pyrmont,
-        radius: 1500,
+        radius: 500,
         type: ['bar']
     }, callback);
 }
