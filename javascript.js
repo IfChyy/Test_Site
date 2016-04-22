@@ -93,19 +93,11 @@ function createMarker(place) {
 
 function initMap() {
 
-    var pyrmont = {lat: 57.148933, lng: -2.094085};
-
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
         zoom: 14
     });
-    var infoWindow = new google.maps.InfoWindow();
-    var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-        location: pyrmont,
-        radius: 2000,
-        type: ['bar']
-    }, callback);
+
 
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
@@ -126,7 +118,13 @@ function initMap() {
         handleLocationError(false, infoWindow, map.getCenter());
     }
 
-
+    var infoWindow = new google.maps.InfoWindow();
+    var service = new google.maps.places.PlacesService(map);
+    service.nearbySearch({
+        location: pos,
+        radius: 2000,
+        type: ['bar']
+    }, callback);
 
 }
 
