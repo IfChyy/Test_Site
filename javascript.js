@@ -27,9 +27,7 @@ function initMap() {
     });
     var infoWindow = new google.maps.InfoWindow({map: map});
 
-
-
-    var pyrmont = {lat: -34.397, lng: 150.644};
+    var pyrmont = {lat: -33.867, lng: 151.195};
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: pyrmont,
@@ -40,7 +38,7 @@ function initMap() {
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch({
         location: pyrmont,
-        radius: 5500,
+        radius: 500,
         type: ['store']
     }, callback);
 }
@@ -64,9 +62,9 @@ function createMarker(place) {
         infowindow.setContent(place.name);
         infowindow.open(map, this);
     });
+}
 
-
-    // Try HTML5 geolocation.
+   /* // Try HTML5 geolocation.
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
             var pos = {
@@ -86,7 +84,7 @@ function createMarker(place) {
     }
 
 
-}
+}*/
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
