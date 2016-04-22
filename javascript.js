@@ -98,6 +98,7 @@ function initMap() {
         zoom: 14
     });
 
+    var infoWindow = new google.maps.InfoWindow();
 
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
@@ -118,7 +119,7 @@ function initMap() {
         handleLocationError(false, infoWindow, map.getCenter());
     }
 
-    var infoWindow = new google.maps.InfoWindow();
+
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch({
         location: pos,
