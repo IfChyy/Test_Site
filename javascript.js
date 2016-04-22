@@ -1,7 +1,3 @@
-/**
- * Created by azifchyy on 22.4.2016 г..
- */
-
 window.fbAsyncInit = function() {
     FB.init({
         appId      : '322156051141744',
@@ -17,13 +13,16 @@ window.fbAsyncInit = function() {
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+var map;
+var service;
+var infowindow;
 
 function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
         zoom: 12
     });
-    var infoWindow = new google.maps.InfoWindow({map: map});
+    infoWindow = new google.maps.InfoWindow({map: map});
 
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
@@ -44,6 +43,22 @@ function initMap() {
         handleLocationError(false, infoWindow, map.getCenter());
     }
 
+    var request = {
+        location: pyrmont,
+        radius: '22500',
+        query: ['bar']
+    };
+    service = new google.maps.places.PlacesService(map);
+    service.textSearch(request, callback);
+}
+
+function callback(results, status) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+            var place = results[i];
+            createMarker(results[i]);
+        }
+    }
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -52,4 +67,3 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: The Geolocation service failed.' :
         'Error: Your browser doesn\'t support geolocation.');
 }
-
