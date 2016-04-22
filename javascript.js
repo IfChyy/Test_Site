@@ -104,7 +104,7 @@ function initMap() {
     service.nearbySearch({
         location: pyrmont,
         radius: 5000,
-        type: ['restaurant']
+        type: ['pub']
     }, callback);
 }
 
