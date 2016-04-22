@@ -28,6 +28,8 @@ function initMap() {
         center: {lat: -34.397, lng: 150.644},
         zoom: 12
     });
+
+
     infowindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch({
@@ -37,6 +39,18 @@ function initMap() {
     }, callback);
 
 
+    var myLatLng = {lat: -25.363, lng: 131.044};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Hello World!'
+    });
     /*// Try HTML5 geolocation.
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
