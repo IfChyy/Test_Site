@@ -100,7 +100,7 @@ function createMarker(place) {
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
-        zoom: 12
+        zoom: 13
     });
     var infoWindow = new google.maps.InfoWindow({map: map});
 
