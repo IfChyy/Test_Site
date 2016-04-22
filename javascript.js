@@ -43,14 +43,6 @@ function initMap() {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
-    var request = {
-        location: map.getCenter(),
-        radius: '500',
-        query: 'bar'
-    };
-
-    var service = new google.maps.places.PlacesService(map);
-    service.textSearch(request, callback);
 
 }
 
@@ -62,16 +54,3 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
 
 
-// Checks that the PlacesServiceStatus is OK, and adds a marker
-// using the place ID and location from the PlacesService.
-function callback(results, status) {
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
-        var marker = new google.maps.Marker({
-            map: map,
-            place: {
-                placeId: results[0].place_id,
-                location: results[0].geometry.location
-            }
-        });
-    }
-}
