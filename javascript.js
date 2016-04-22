@@ -44,7 +44,7 @@ function initMap() {
     }
 
     var request = {
-        location: {lat: -34.397, lng: 150.644},
+        location: {lat: 57.2187, lng: -2.1895},
         radius: '22500',
         query: ['bar']
     };
