@@ -49,7 +49,7 @@ function initMap() {
 
     var request = {
         location: pyrmont,
-        radius: '2500',
+        radius: '22500',
         query: ['bar']
     };
     service = new google.maps.places.PlacesService(map);
