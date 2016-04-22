@@ -49,13 +49,14 @@ function initMap() {
         handleLocationError(false, infoWindow, map.getCenter());
     }
 
+
+    service = new google.maps.places.PlacesService(map);
     var request = {
         location: pyrmont,
         radius: '22500',
         query: ['bar']
 
     };
-    service = new google.maps.places.PlacesService(map);
     service.textSearch(request, callback);
 }
 
