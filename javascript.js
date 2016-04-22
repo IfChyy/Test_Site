@@ -28,13 +28,7 @@ function initMap() {
         center: pyrmont ,
         zoom: 12
     });
-    infowindow = new google.maps.InfoWindow();
-    var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-        location: pyrmont,
-        radius: 5000,
-        type: ['bar']
-    }, callback);
+     infoWindow = new google.maps.InfoWindow({map: map});
 
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
@@ -54,27 +48,24 @@ function initMap() {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
+
+    var request = {
+        location: pyrmont,
+        radius: '22500',
+        query: ['bar']
+
+    };
+    service = new google.maps.places.PlacesService(map);
+    service.textSearch(request, callback);
 }
 
 function callback(results, status) {
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
+            var place = results[i];
             createMarker(results[i]);
         }
     }
-}
-
-function createMarker(place) {
-    var placeLoc = place.geometry.location;
-    var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-    });
-
-    google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(place.name);
-        infowindow.open(map, this);
-    });
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
