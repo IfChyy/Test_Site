@@ -92,7 +92,7 @@ var map;
 var infowindow;
 
 function initMap() {
-    var pyrmont ='';
+    var pyrmont = {lat: 57.148933, lng: -2.094085};
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 57.148933, lng: -2.094085},
