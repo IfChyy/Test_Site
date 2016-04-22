@@ -20,7 +20,8 @@ window.fbAsyncInit = function() {
 var map;
 var service;
 var infowindow;
-
+service = new google.maps.places.PlacesService(map);
+service.textSearch(request, callback);
 function initMap() {
      map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
