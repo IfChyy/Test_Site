@@ -25,13 +25,13 @@ function initMap() {
 
     var pyrmont = {lat: -34.397, lng: 150.644};
     map = new google.maps.Map(document.getElementById('map'), {
-        center: pyrmont,
+        center: {lat: -34.397, lng: 150.644},
         zoom: 12
     });
     infowindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch({
-        location: pyrmont,
+        location: {lat: -34.397, lng: 150.644},
         radius: 500,
         type: ['store']
     }, callback);
@@ -55,7 +55,7 @@ function initMap() {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
-   
+
 function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
