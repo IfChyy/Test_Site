@@ -61,6 +61,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: Your browser doesn\'t support geolocation.');
 }
 
+
 // Checks that the PlacesServiceStatus is OK, and adds a marker
 // using the place ID and location from the PlacesService.
 function callback(results, status) {
