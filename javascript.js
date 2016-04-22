@@ -52,37 +52,3 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: Your browser doesn\'t support geolocation.');
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$(document).ready(function(){
-    $('.fb-share-button').click(function(d){
-        d.preventDefault();
-        FB.ui(
-            {
-                name: 'AAAAAAAAAAAAAAAA',
-                link: 'http://google.com',
-                picture: 'http://group-o.azurewebsites.net/cheers_logo.png’',
-                caption: 'Top 3 reasons why you should care about your finance',
-                description: "Q SE SHIBAI BE SIME ",
-                message: ' EBASI MAIKATAAAAAA',
-            });
-    });
-});
-
-
