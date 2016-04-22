@@ -102,7 +102,7 @@ function initialize()
 
     var mapOptions = {
         zoom: 14,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeId: google.maps.MapTypeId.map,
         scrollwheel: false,
         panControl: false,
         streetViewControl: false,
