@@ -19,7 +19,7 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 var map;
 var service;
-var infoWindow;
+var infowindow;
 
 function initMap() {
     var pyrmont = new google.maps.LatLng(-34.397, 150.644);
@@ -48,8 +48,26 @@ function initMap() {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
+
+
+
+    var request = {
+        location: pyrmont,
+        radius: '22500',
+        query: ['bar']
+
+    };service = new google.maps.places.PlacesService(map);
+    service.textSearch(request, callback);
 }
 
+function callback(results, status) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+            var place = results[i];
+            createMarker(results[i]);
+        }
+    }
+}
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
