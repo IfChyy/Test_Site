@@ -43,11 +43,12 @@ function initMap() {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
+
     var infowindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
 
     service.getDetails({
-        placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4'
+        placeId: 'airport'
     }, function(place, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             var marker = new google.maps.Marker({
