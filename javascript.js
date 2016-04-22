@@ -18,7 +18,7 @@ window.fbAsyncInit = function() {
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-/**
+
 var map;
 var infowindow;
 
@@ -28,105 +28,8 @@ function initMap() {
         zoom: 12
     });
     var infoWindow = new google.maps.InfoWindow({map: map});
+    
 
-    var pyrmont = {lat: -33.867, lng: 151.195};
-
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: pyrmont,
-        zoom: 15
-    });
-
-    infowindow = new google.maps.InfoWindow();
-    var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-        location: pyrmont,
-        radius: 500,
-        type: ['store']
-    }, callback);
-}
-
-function callback(results, status) {
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
-            createMarker(results[i]);
-        }
-    }
-}
-
-function createMarker(place) {
-    var placeLoc = place.geometry.location;
-    var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-    });
-
-    google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(place.name);
-        infowindow.open(map, this);
-    });
-}
-
-   /* // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            map.setCenter(pos);
-        }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-        });
-    } else {
-        // Browser doesn't support Geolocation
-        handleLocationError(false, infoWindow, map.getCenter());
-    }
-
-
-}*/
-
-var map;
-var infowindow;
-
-function initMap() {
-    var pyrmont = {lat: 57.148933, lng: -2.094085};
-
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 57.148933, lng: -2.094085},
-        zoom: 15
-    });
-
-    infowindow = new google.maps.InfoWindow();
-    var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-        location: pyrmont,
-        radius: 5000,
-        type: ['pub']
-    }, callback);
-}
-
-function callback(results, status) {
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
-            createMarker(results[i]);
-        }
-    }
-}
-
-function createMarker(place) {
-    var placeLoc = place.geometry.location;
-    var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-    });
-
-    google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(place.name);
-        infowindow.open(map, this);
-    });
 
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
@@ -146,6 +49,51 @@ function createMarker(place) {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
+
+
+}
+
+var map;
+var infowindow;
+
+function initMap() {
+    var pyrmont = {lat: 57.148933, lng: -2.094085};
+
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 57.148933, lng: -2.094085},
+        zoom: 15
+    });
+
+    infowindow = new google.maps.InfoWindow();
+    var service = new google.maps.places.PlacesService(map);
+    service.nearbySearch({
+        location: pyrmont,
+        radius: 5000,
+        type: ['bar']
+    }, callback);
+}
+
+function callback(results, status) {
+    if (status === google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+        }
+    }
+}
+
+function createMarker(place) {
+    var placeLoc = place.geometry.location;
+    var marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(place.name);
+        infowindow.open(map, this);
+    });
+
+
 }
 
 
