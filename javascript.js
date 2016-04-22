@@ -94,13 +94,13 @@ function createMarker(place) {
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
-        zoom: 13
+        zoom: 14
     });
     var infoWindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch({
         location: map,
-        radius: 800,
+        radius: 2000,
         type: ['bar']
     }, callback);
 
