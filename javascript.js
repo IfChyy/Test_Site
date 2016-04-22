@@ -116,7 +116,7 @@ function initMap()
 
                 infowindow = new google.maps.InfoWindow({map: map});
 
-                var request = {location:pos,radius:1000,types: ['bars']};
+                var request = {location:pos,radius:1000,types: ['bar']};
 
                 map.setCenter(pos);
 
