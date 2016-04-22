@@ -20,8 +20,7 @@ window.fbAsyncInit = function() {
 var map;
 var service;
 var infowindow;
-service = new google.maps.places.PlacesService(map);
-service.textSearch(request, callback);
+
 function initMap() {
      map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
@@ -53,16 +52,8 @@ function initMap() {
         radius: '500',
         query: 'restaurant'
     }
-
-}
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-        'Error: The Geolocation service failed.' :
-        'Error: Your browser doesn\'t support geolocation.');
-}
-
+    service = new google.maps.places.PlacesService(map);
+    service.textSearch(request, callback);
     function callback(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
             for (var i = 0; i < results.length; i++) {
@@ -71,6 +62,17 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
             }
         }
     }
+}
+
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+        'Error: The Geolocation service failed.' :
+        'Error: Your browser doesn\'t support geolocation.');
+}
+
+
 
 
 
