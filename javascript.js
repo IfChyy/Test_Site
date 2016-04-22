@@ -22,8 +22,10 @@ var service;
 var infowindow;
 
 function initMap() {
+    var pyrmont = new google.maps.LatLng(-34.397, 150.644);
+
      map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
+        center: pyrmont ,
         zoom: 12
     });
      infoWindow = new google.maps.InfoWindow({map: map});
@@ -51,7 +53,7 @@ function initMap() {
         location: pyrmont,
         radius: '22500',
         query: ['bar']
-        
+
     };
     service = new google.maps.places.PlacesService(map);
     service.textSearch(request, callback);
