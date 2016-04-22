@@ -109,7 +109,7 @@ function initialize()
         mapTypeControl: false,
     };
 
-    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
     //HTML5 geolocation
     if (navigator.geolocation)
@@ -120,7 +120,7 @@ function initialize()
 
                 infowindow = new google.maps.InfoWindow({map: map,position: pos,content: 'You Are Here'});
 
-                var request = {location:pos,radius:500,types: ['restaurant, cafe, bars']};
+                var request = {location:pos,radius:1500,types: ['restaurant, cafe, bars']};
 
                 map.setCenter(pos);
 
