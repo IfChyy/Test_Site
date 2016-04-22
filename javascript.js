@@ -44,7 +44,7 @@ function initMap() {
     }
 
     var request = {
-        location: pyrmont,
+        location: {lat: -34.397, lng: 150.644},
         radius: '22500',
         query: ['bar']
     };
