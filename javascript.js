@@ -49,21 +49,21 @@ function initMap() {
 
     var request = {
         location: pyrmont,
-        radius: '500',
-        query: 'restaurant'
-    }
+        radius: '2500',
+        query: ['bar']
+    };
     service = new google.maps.places.PlacesService(map);
     service.textSearch(request, callback);
-    function callback(results, status) {
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-                var place = results[i];
-                createMarker(results[i]);
-            }
+}
+
+function callback(results, status) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+            var place = results[i];
+            createMarker(results[i]);
         }
     }
 }
-
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
