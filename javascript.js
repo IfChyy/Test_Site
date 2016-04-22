@@ -88,11 +88,38 @@ function createMarker(place) {
 
 }*/
 
+
+var pos = null;
+// Try HTML5 geolocation.
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+        pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+        };
+
+        infoWindow.setPosition(pos);
+        infoWindow.setContent('Location found.');
+        map.setCenter(pos);
+    }, function() {
+        handleLocationError(true, infoWindow, map.getCenter());
+    });
+} else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+}
+
+
+
+
+
+
+
 var map;
 var infowindow;
 
 function initMap() {
-    var pyrmont = {lat: 57.148933, lng: -2.094085};
+    var pos = {lat: 57.148933, lng: -2.094085};
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 57.148933, lng: -2.094085},
@@ -102,7 +129,7 @@ function initMap() {
     infowindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch({
-        location: pyrmont,
+        location: pos,
         radius: 5000,
         type: ['bar']
     }, callback);
