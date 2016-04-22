@@ -50,7 +50,7 @@ function initMap() {
     var request = {
         location: pyrmont,
         radius: '500',
-        query: 'bar'
+        query: 'restaurant'
     }
 
 }
