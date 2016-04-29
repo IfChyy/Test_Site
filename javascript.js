@@ -46,7 +46,7 @@ function initMap()
 
                 infowindow = new google.maps.InfoWindow({map: map,position: pos,content: 'You Are Here'});
 
-                var request = {location:pos,radius:1000,types: ['bar']};
+                var request = {location:pos,radius:1500,types: ['bar']};
 
                 map.setCenter(pos);
 
