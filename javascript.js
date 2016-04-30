@@ -79,21 +79,10 @@ function initMap()
         var placeLoc = place.geometry.location;
         var marker = new google.maps.Marker({
             map: map,
-            animation: google.maps.Animation.DROP,
             position: place.geometry.location
         });
 
-        marker.addListener('click', toggleBounce);
-
-        function toggleBounce() {
-            if (marker.getAnimation() !== null) {
-                marker.setAnimation(null);
-            } else {
-                marker.setAnimation(google.maps.Animation.BOUNCE);
-                marker.setAnimation(null);
-            }
-        }
-
+    
 
         google.maps.event.addListener(marker, 'click', function() {
             infowindow.setContent(place.name);
