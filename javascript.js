@@ -67,20 +67,12 @@ function initMap()
     }
 
     function callback(results, status) {
-        /**NASHIQ KOD
+
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             for (var i = 0; i < results.length; i++) {
                 createMarker(results[i]);
             }
         }
-         */
-        var markers=[];
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-                markers.push(createMarker(results[i]));
-            }
-        }
-
     }
 
     function createMarker(place) {
@@ -97,34 +89,6 @@ function initMap()
 
 
     }
-
-
-    var directionsService = new google.maps.DirectionsService;
-    var directionsDisplay = new google.maps.DirectionsRenderer;
-
-    directionsDisplay.setMap(map);
-
-    var onChangeHandler = function() {
-        calculateAndDisplayRoute(directionsService, directionsDisplay);
-    };
-
-
-
-    function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-        directionsService.route({
-            origin: pos.value,
-            destination:  {lat: -34.397, lng: 150.644},
-            travelMode: google.maps.TravelMode.WALKING
-        }, function(response, status) {
-            if (status === google.maps.DirectionsStatus.OK) {
-                directionsDisplay.setDirections(response);
-            } else {
-                window.alert('Directions request failed due to ' + status);
-            }
-        });
-    }
-
-
 
 
 
