@@ -107,14 +107,13 @@ function initMap()
     var onChangeHandler = function() {
         calculateAndDisplayRoute(directionsService, directionsDisplay);
     };
-    document.getElementById('start').addEventListener('change', onChangeHandler);
-    document.getElementById('end').addEventListener('change', onChangeHandler);
+
 
 
     function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         directionsService.route({
-            origin: document.getElementById('map').value,
-            destination: document.getElementById('map').value,
+            origin: pos,
+            destination:  {lat: -34.397, lng: 150.644},
             travelMode: google.maps.TravelMode.WALKING
         }, function(response, status) {
             if (status === google.maps.DirectionsStatus.OK) {
