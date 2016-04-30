@@ -31,7 +31,7 @@ function initMap()
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
-        zoom: 13
+        zoom: 7
     });
 
     //HTML5 geolocation
@@ -82,7 +82,7 @@ function initMap()
             position: place.geometry.location
         });
 
-    
+
 
         google.maps.event.addListener(marker, 'click', function() {
             infowindow.setContent(place.name);
