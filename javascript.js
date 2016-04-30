@@ -25,7 +25,7 @@ var map;
 var pos;
 var infowindow;
 
-function initMap1()
+function initMap()
 {
 
 
