@@ -80,7 +80,7 @@ function initMap()
                 markers.push(createMarker(results[i]));
             }
         }
-        $('#header').data('markers',markers);
+
     }
 
     function createMarker(place) {
@@ -97,38 +97,6 @@ function initMap()
 
 
     }
-
-
-
-
-
-
-    $('#header').data('pos',pos);
-
-    $( "#header" ).click(function() {
-
-        var pos     = $(this).data('pos'),
-            markers = $(this).data('markers'),
-            closest;
-
-        if(!pos || !markers){
-            return;
-        }
-
-        $.each(markers,function(){
-            var distance=google.maps.geometry.spherical
-                .computeDistanceBetween(this.getPosition(),pos);
-            if(!closest || closest.distance > distance){
-                closest={marker:this,
-                    distance:distance}
-            }
-        });
-        if(closest){
-            //closest.marker will be the nearest marker, do something with it
-            //here we simply trigger a click, which will open the InfoWindow
-            google.maps.event.trigger(closest.marker,'click')
-        }
-    });
 
 
 
