@@ -67,11 +67,20 @@ function initMap()
     }
 
     function callback(results, status) {
+        /**NASHIQ KOD
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             for (var i = 0; i < results.length; i++) {
                 createMarker(results[i]);
             }
         }
+         */
+        var markers=[];
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+                markers.push(createMarker(results[i]));
+            }
+        }
+        $('#logo').data('markers',markers);
     }
 
     function createMarker(place) {
@@ -88,6 +97,47 @@ function initMap()
 
 
     }
+
+
+
+
+
+
+    $('#logo').data('pos',pos);
+
+    $( "#logo" ).click(function() {
+
+        var pos     = $(this).data('pos'),
+            markers = $(this).data('markers'),
+            closest;
+
+        if(!pos || !markers){
+            return;
+        }
+
+        $.each(markers,function(){
+            var distance=google.maps.geometry.spherical
+                .computeDistanceBetween(this.getPosition(),pos);
+            if(!closest || closest.distance > distance){
+                closest={marker:this,
+                    distance:distance}
+            }
+        });
+        if(closest){
+            //closest.marker will be the nearest marker, do something with it
+            //here we simply trigger a click, which will open the InfoWindow
+            google.maps.event.trigger(closest.marker,'click')
+        }
+    });
+
+
+
+
+
+
+
+
+
 }
 google.maps.event.addDomListener(window, 'load', initMap);
 
