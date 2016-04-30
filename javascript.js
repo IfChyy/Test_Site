@@ -80,7 +80,7 @@ function initMap()
                 markers.push(createMarker(results[i]));
             }
         }
-        $('#logo').data('markers',markers);
+        $('#header').data('markers',markers);
     }
 
     function createMarker(place) {
@@ -103,9 +103,9 @@ function initMap()
 
 
 
-    $('#logo').data('pos',pos);
+    $('#header').data('pos',pos);
 
-    $( "#logo" ).click(function() {
+    $( "#header" ).click(function() {
 
         var pos     = $(this).data('pos'),
             markers = $(this).data('markers'),
