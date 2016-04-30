@@ -112,7 +112,7 @@ function initMap()
 
     function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         directionsService.route({
-            origin: pos,
+            origin: pos.value,
             destination:  {lat: -34.397, lng: 150.644},
             travelMode: google.maps.TravelMode.WALKING
         }, function(response, status) {
