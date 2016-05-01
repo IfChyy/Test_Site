@@ -95,13 +95,13 @@ function initMap()
     }
 
 
-/**
+
     var directionsService = new google.maps.DirectionsService();
     var directionsDisplay = new google.maps.DirectionsRenderer();
 
     directionsDisplay.setMap(map);
     var request = {
-        origin: '',
+        origin: pos.value,
         destination: 'Glasgow',
         travelMode: google.maps.DirectionsTravelMode.DRIVING
     };
@@ -115,7 +115,7 @@ function initMap()
 
 
 
-*/
+
 
 }
 google.maps.event.addDomListener(window, 'load', initMap);
