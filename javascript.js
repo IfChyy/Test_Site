@@ -101,8 +101,8 @@ function initMap()
     directionsDisplay.setMap(map);
     var request = {
         origin: {
-        lat: pos.coords.latitude,
-        lng: pos.coords.longitude
+        lat: pos.latitude,
+        lng: pos.longitude
     },
         destination: 'Glasgow',
         travelMode: google.maps.DirectionsTravelMode.DRIVING
