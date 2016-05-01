@@ -102,7 +102,7 @@ function initMap()
     directionsDisplay.setMap(map);
     var start = pos.value;
     var request = {
-        origin: start,
+        origin: 'Aberdeen',
         destination: 'Glasgow',
         travelMode: google.maps.DirectionsTravelMode.DRIVING
     };
