@@ -93,6 +93,24 @@ function initMap()
     }
 
 
+    var route = new google.maps.DirectionsService;
+
+
+    var point1 = new google.maps.LatLng(pos);
+    var point2 = new google.maps.LatLng(57.143533,-2.124983);
+
+    var wps = [{ location: point1 }, { location: point2 }];
+
+    var org = new google.maps.LatLng ( -33.89192157947345,151.13604068756104);
+    var dest = new google.maps.LatLng ( -33.69727974097957,150.29047966003418);
+
+    var request = {
+        origin: org,
+        destination: dest,
+        waypoints: wps,
+        travelMode: google.maps.DirectionsTravelMode.WALKING
+    };
+
 
 
 
