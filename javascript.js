@@ -31,7 +31,8 @@ function initMap()
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
-        zoom: 13
+        zoom: 13,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
     //HTML5 geolocation
@@ -94,10 +95,22 @@ function initMap()
 
 
 
+    var directionsService = new google.maps.DirectionsService();
+    var directionsDisplay = new google.maps.DirectionsRenderer();
 
+    directionsDisplay.setMap(map);
+    var request = {
+        origin: 'Aberdeen',
+        destination: 'Glasgow',
+        travelMode: google.maps.DirectionsTravelMode.DRIVING
+    };
 
+    directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+        }
+    });
 
-    
 
 
 
