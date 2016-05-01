@@ -24,9 +24,7 @@ window.fbAsyncInit = function() {
 var map;
 var pos;
 var infowindow;
-var coords;
-var latitude;
-var longitude;
+
 
 function initMap()
 {
@@ -43,14 +41,6 @@ function initMap()
     {
         navigator.geolocation.getCurrentPosition(function(position)
         {
-
-
-             latitude = position.coords.latitude;                    //users current
-             longitude = position.coords.longitude;                 //location
-            coords = new google.maps.LatLng(latitude, longitude);
-
-
-
                 pos = {
                     lat: position.coords.latitude,
                     lng: position.coords.longitude
@@ -105,13 +95,13 @@ function initMap()
     }
 
 
-
+/**
     var directionsService = new google.maps.DirectionsService();
     var directionsDisplay = new google.maps.DirectionsRenderer();
 
     directionsDisplay.setMap(map);
     var request = {
-        origin: coords,
+        origin: '',
         destination: 'Glasgow',
         travelMode: google.maps.DirectionsTravelMode.DRIVING
     };
@@ -125,7 +115,7 @@ function initMap()
 
 
 
-
+*/
 
 }
 google.maps.event.addDomListener(window, 'load', initMap);
