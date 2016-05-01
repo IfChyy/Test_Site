@@ -100,7 +100,7 @@ function initMap()
 
     directionsDisplay.setMap(map);
     var request = {
-        origin: pos.lat.lng,
+        origin: pos,
         destination: 'Glasgow',
         travelMode: google.maps.DirectionsTravelMode.DRIVING
     };
