@@ -25,6 +25,8 @@ var map;
 var pos;
 var infowindow;
 var coords;
+var latitude;
+var longitude;
 
 function initMap()
 {
@@ -43,8 +45,8 @@ function initMap()
         {
 
 
-            var latitude = position.coords.latitude;                    //users current
-            var longitude = position.coords.longitude;                 //location
+             latitude = position.coords.latitude;                    //users current
+             longitude = position.coords.longitude;                 //location
             coords = new google.maps.LatLng(latitude, longitude);
 
 
