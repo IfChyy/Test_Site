@@ -100,10 +100,7 @@ function initMap()
 
     directionsDisplay.setMap(map);
     var request = {
-        origin: {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-        },
+        origin: 'Aberdeen',
         destination: 'Glasgow',
         travelMode: google.maps.DirectionsTravelMode.DRIVING
     };
