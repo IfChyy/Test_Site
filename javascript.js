@@ -108,27 +108,6 @@ function initMap()
 
 
 
-/**
-            var request = { origin:[headmarker.lat(),headmarker.lng()],
-            destination:[tailmarker.lat(),tailmarker.lng()],
-            travelMode: google.maps.DirectionsTravelMode.DRIVING };
-            directionsDisplay.setMap(map);
-            directionsService.route(request, function(response, status) {
-                if (status == google.maps.DirectionsStatus.OK) { directionsDisplay.setDirections(response); } });
- 
-*/
-
-            google.maps.event.addListener(tailmarker,'click', function(event)
-            {
-                infowindow =  new google.maps.InfoWindow({
-                    map: map,
-                    content: "coordinates:"+event.latLng.toUrlValue(),
-                    position: event.latLng,
-                });
-                infowindow.open(map, tailmarker);
-            });
-
-
 
 
 
@@ -138,8 +117,8 @@ function initMap()
             directionsDisplay.setMap(map);
             var request = {
                 origin:  {lat:  pos.lat, lng: pos.lng},
-                destination: {lat:tailmarker.lat(), lng:tailmarker.lng()},
-                travelMode: google.maps.DirectionsTravelMode.DRIVING
+                destination: 'Aberdeen',
+                travelMode: google.maps.DirectionsTravelMode.WALKING
             };
 
             directionsService.route(request, function(response, status) {
