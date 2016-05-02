@@ -26,7 +26,7 @@ var pos;
 var infowindow;
 var yourPosition;
 
-var neshto;
+
 
 function initMap()
 {
@@ -54,8 +54,8 @@ function initMap()
                 var request = {location:pos,radius:2500,types: ['bar']};
 
 
-                //dlsakldsaldfsaflkdsjflksdajlfsldkafssdfa
-                neshto = {location:pos,radius:500,types: ['bar']};
+                var neshto = request.location;
+
 
 
                 map.setCenter(pos);
@@ -63,7 +63,7 @@ function initMap()
 
                 var service = new google.maps.places.PlacesService(map);
                 service.nearbySearch(request,callback);
-                service.nearbySearch(neshto, callback);
+
 
 
 
@@ -117,7 +117,7 @@ function initMap()
 
 
 
-            var newPos = neshto.location;
+
 
 
             var directionsService = new google.maps.DirectionsService();
@@ -126,8 +126,8 @@ function initMap()
             directionsDisplay.setMap(map);
             var request = {
                 origin:  {lat:  pos.lat, lng: pos.lng},
-                destination: { lat: newPos.lat, lng: newPos.lng},
-                travelMode: google.maps.DirectionsTravelMode.WALKING
+                destination: {lat:  neshto.lat, lng: neshto.lng},
+                travelMode: google.maps.DirectionsTravelMode.DRIVING
             };
 
             directionsService.route(request, function(response, status) {
