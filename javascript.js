@@ -23,7 +23,7 @@ window.fbAsyncInit = function() {
 
 var map;
 var pos;
-var infowindow = new google.maps.InfoWindow();
+var infowindow;
 var yourPosition;
 
 
@@ -47,7 +47,7 @@ function initMap()
                     lng: position.coords.longitude
                 };
 
-               // infowindow = new google.maps.InfoWindow();
+                infowindow = new google.maps.InfoWindow();
                 yourPosition = new google.maps.InfoWindow({map: map,position: pos,content: 'You Are Here'});
 
                 var request = {location:pos,radius:2500,types: ['bar']};
