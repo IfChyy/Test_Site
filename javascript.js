@@ -63,7 +63,7 @@ function initMap()
             var lat = mylatlng.lat();
             var lng = mylatlng.lng();
 
-            function find_closest_marker( lat, lon ) {
+            function find_closest_marker( lat, lng ) {
                 var pi = Math.PI;
                 var R = 6371; //equatorial radius
                 var distances = [];
@@ -73,13 +73,13 @@ function initMap()
                     var lat2 = markers[i].position.lat();
                     var lon2 = markers[i].position.lng();
 
-                    var chLat = lat2-lat1;
-                    var chLon = lon2-lon1;
+                    var chLat = lat2-lat;
+                    var chLon = lon2-lng;
 
                     var dLat = chLat*(pi/180);
                     var dLon = chLon*(pi/180);
 
-                    var rLat1 = lat1*(pi/180);
+                    var rLat1 = lat*(pi/180);
                     var rLat2 = lat2*(pi/180);
 
                     var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
