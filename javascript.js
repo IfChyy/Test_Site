@@ -100,10 +100,10 @@ function initMap()
 
     var directionsService = new google.maps.DirectionsService();
     var directionsDisplay = new google.maps.DirectionsRenderer();
-    //57.1498817,-2.1960759
+    //57.119234, -2.138756
     //var myLatLng = new google.maps.LatLng({lat:  pos.lat, lng: pos.lng});
 
-    var myLatLng = new google.maps.LatLng({lat:  57.1498817, lng: -2.1960759});
+    var myLatLng = new google.maps.LatLng({lat:  57.119234, lng: -2.138756});
     directionsDisplay.setMap(map);
     var request = {
         origin:  myLatLng,
