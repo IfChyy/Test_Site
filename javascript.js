@@ -63,7 +63,7 @@ function initMap()
 
                 var service = new google.maps.places.PlacesService(map);
                 service.nearbySearch(request,callback);
-
+                service.nearbySearch(neshto, callback);
 
 
 
