@@ -1,6 +1,6 @@
 
 body{
-    background-image:url(black.jpg);
+    background-image:url(background1.jpg);
     background-repeat: no-repeat;
     background-size:cover;
 }
@@ -27,7 +27,7 @@ body{
 }
 
 #beer{
-    background-image:url(border.png);
+    background-image:url(background2.png);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -78,7 +78,7 @@ body{
     width:20%;
     height:50%;
     float: right;
-    background-image:url(border.png);
+    background-image:url(background2.png);
     border: 3px solid darkgoldenrod;
     border-radius: 25px;
     padding: 0px 0px 15px 0px;
