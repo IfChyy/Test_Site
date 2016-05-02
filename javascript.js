@@ -62,7 +62,7 @@ function initMap()
 
 
 
-
+/**
 
         //sipi  GAZ BATE
             var mylatlng = new google.maps.LatLng(pos.lat, pos.lng);
@@ -104,7 +104,7 @@ function initMap()
             }
 
 
-
+*/
 
 
 
