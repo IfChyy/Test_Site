@@ -55,7 +55,7 @@ function initMap()
 
 
                 //dlsakldsaldfsaflkdsjflksdajlfsldkafssdfa
-                neshto = {location:pos,radius:100,types: ['bar']};
+                neshto = {location:pos,radius:500,types: ['bar']};
 
 
                 map.setCenter(pos);
@@ -127,7 +127,7 @@ function initMap()
             var request = {
                 origin:  {lat:  pos.lat, lng: pos.lng},
                 destination: { lat: newPos.lat, lng: newPos.lng},
-                travelMode: google.maps.DirectionsTravelMode.DRIVING
+                travelMode: google.maps.DirectionsTravelMode.WALKING
             };
 
             directionsService.route(request, function(response, status) {
