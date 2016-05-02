@@ -1,11 +1,11 @@
-
+/* forming the body of the site with a picture for background */
 body{
     background-image:url(background1.jpg);
     background-repeat: no-repeat;
     background-size:cover;
 }
 
-
+/* formating the header to be equal for different sizes */
 #header{
     display:inline-block;
     margin-left:auto;
@@ -13,19 +13,19 @@ body{
     width:100%;
     height:10%;
 }
-
+/* formating header ul items to be displayed inline */
 #header ul{
     display:inline-block;
     padding: 0;
 }
-
+/* formating header ul li items to be displayed inline */
 #header ul li{
     display:inline-block;
     padding: 0;
     color: white;
     text-decoration: none;
 }
-
+/* formating beer div section with background image border and sizes for different widhts*/
 #beer{
     background-image:url(background2.png);
     background-repeat: no-repeat;
@@ -40,27 +40,29 @@ body{
     color: white;
 
 }
+/* formating beer paragraphs */
 #beer p{
     padding: 0 0 0 20px;
     font-size: 20px;
 
 }
-
+/* formating beer uls to float left and adding padding */
 #beer ul{
     float: left;
     padding: 0px 0px 15px 20px ;
 
 
 }
+/* formating size of beer images */
 #beer img{
     widht: 85px;
     height: 75px;
 }
-
+/* formating beer articles to be lower than usual */
 #beer-descriptions article{
     margin-top:55%;
 }
-
+/* creating a section for the map and formating it to fit in the middle */
 #map{
     width:40%;
     height:400px;
@@ -69,11 +71,11 @@ body{
     margin-top: 1%;
     margin-left: 7%;
 }
-
+/* enlarging the map to fit expectations */
 #map img {
     width: 110%;
 }
-
+/* formating bars section to fit the page and adding backround image */
 #bars{
     width:20%;
     height:50%;
@@ -84,7 +86,7 @@ body{
     padding: 0px 0px 15px 0px;
     margin-right: 2%;
 }
-
+/* formating bar images */
 #bars img{
     padding-left: 30px;
     width: 85px;
@@ -92,13 +94,14 @@ body{
 
 
 }
+/* formating bar paragraph to fit expectations */
 #bars p{
     padding: 0 0 0 25px;
     font-size: 20px;
     color: white;
 
 }
-
+/* formating the logo to be always in the middle */
 #logo{
     margin-top: 2%;
     width: 15%;
@@ -107,13 +110,14 @@ body{
     margin-right: auto;
     margin-bottom: 3%;
 }
+/* format share button to be on top left corner */
 #share{
     float: right;
     margin-right: 5%;
     margin-top: 3%;
 }
 
-
+/* formating the web page for full hd */
 
 @media screen and (min-width: 1700px) {
 

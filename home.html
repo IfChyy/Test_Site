@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
+    <!-- a google verification for google api's -->
     <meta name="google-site-verification" content="QySXA8BmElIfzBQ3olerdhkIp_mYXiov1naAPUgUzMA" />
-
+    <!-- craeting the title of the webpage and adding links to javascript and css files -->
     <title>Home</title>
     <script  src="javascript.js"></script>
     <link rel="stylesheet" href="css.css">
-
+    <!-- adding links to ajax and google api's -->
     <script  async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGtiZFGHvGzmEQFW9gMJWG0iR1-zYxCQo&libraries=places&callback=initMap"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal&key=AIzaSyAyR3IjAp32pYy0_ITtweG4ea1uiZ70j8I" type="text/javascript"></script>
@@ -16,14 +16,14 @@
 
 </head>
 <body>
-
+<!-- header section of the web app with logo and share button-->
     <section id="header">
             <img id="logo" src="cheers_logo.png" alt="" >
             <ul id="share">
                 <li class="fb-share-button" data-href="http://group-o.azurewebsites.net/" data-layout="button_count" data-mobile-iframe="true"></li>
             </ul>
     </section>
-
+<!-- creating beer section with paragraph to identify the section and populating it with beers -->
     <section id="beer">
         <p>Popular Beers in Aberdeen</p>
         <ul id="beer-pictures">
@@ -41,7 +41,7 @@
             <a href="http://kopparberg.co.uk/">
                  <img src="https://pbs.twimg.com/media/Cg-ajk0WwAEQE4N.jpg"  title="Learn more about Kopparberg."  ><br></a>
         </ul>
-
+<!-- populating an unorder list with beer names equal to the pictures -->
         <ul id="beer-descriptions">
             <article>Budweiser</article><br>
             <article>Stella Artois</article><br>
@@ -51,12 +51,12 @@
             <article>Kopparberg</article><br>
             </ul>
     </section>
-
+<!-- creating a section in which the map is going to reside -->
     <section id="map">
 
     </section>
 
-
+<!-- creating the bars section for popular bars in aberdeen -->
     <section id="bars">
         <p>Popular Bars in Aberdeen</p>
         <a href="http://www.oldblackfriars-aberdeen.co.uk/">
