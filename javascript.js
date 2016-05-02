@@ -20,7 +20,6 @@ window.fbAsyncInit = function() {
 
 
 
-
 var map;
 var pos;
 var infowindow;
@@ -43,71 +42,20 @@ function initMap()
     {
         navigator.geolocation.getCurrentPosition(function(position)
         {
-                pos = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude
-                };
+            pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
 
-                infowindow = new google.maps.InfoWindow();
-                yourPosition = new google.maps.InfoWindow({map: map,position: pos,content: 'You Are Here'});
+            infowindow = new google.maps.InfoWindow();
+            yourPosition = new google.maps.InfoWindow({map: map,position: pos,content: 'You Are Here'});
 
-                var request = {location:pos,radius:2500,types: ['bar']};
+            var request = {location:pos,radius:2500,types: ['bar']};
 
-                map.setCenter(pos);
+            map.setCenter(pos);
 
-
-                var service = new google.maps.places.PlacesService(map);
-                service.nearbySearch(request,callback);
-
-
-
-
-/**
-
-        //sipi  GAZ BATE
-            var mylatlng = new google.maps.LatLng(pos.lat, pos.lng);
-            var lat = mylatlng.lat();
-            var lng = mylatlng.lng();
-
-            function find_closest_marker( lat, lng ) {
-                var pi = Math.PI;
-                var R = 6371; //equatorial radius
-                var distances = [];
-                var closest = -1;
-
-                for( i=0;i<results.length; i++ ) {
-                    var lat2 = results[i].position.lat();
-                    var lon2 = results[i].position.lng();
-
-                    var chLat = lat2-lat;
-                    var chLon = lon2-lng;
-
-                    var dLat = chLat*(pi/180);
-                    var dLon = chLon*(pi/180);
-
-                    var rLat1 = lat*(pi/180);
-                    var rLat2 = lat2*(pi/180);
-
-                    var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-                        Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(rLat1) * Math.cos(rLat2);
-                    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-                    var d = R * c;
-
-                    distances[i] = d;
-                    if ( closest == -1 || d < distances[closest] ) {
-                        closest = i;
-                    }
-                }
-
-                // (debug) The closest marker is:
-                console.log(results[closest]);
-            }
-
-
-*/
-
-
-
+            var service = new google.maps.places.PlacesService(map);
+            service.nearbySearch(request,callback);
 
 
 
@@ -126,14 +74,7 @@ function initMap()
                     directionsDisplay.setDirections(response);
                 }
             });
-
-
-
-
-
-
-
-            },
+        },
 
             function()
             {
@@ -146,7 +87,6 @@ function initMap()
     }
 
     function callback(results, status) {
-
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             for (var i = 0; i < results.length; i++) {
                 createMarker(results[i]);
@@ -162,37 +102,11 @@ function initMap()
         });
 
 
-
         google.maps.event.addListener(marker, 'click', function() {
             infowindow.setContent(place.name);
             infowindow.open(map, this);
         });
-
-
     }
-
-
-/**
-    var directionsService = new google.maps.DirectionsService();
-    var directionsDisplay = new google.maps.DirectionsRenderer();
-    //57.119234, -2.138756
-    var myLatLng = new google.maps.LatLng({lat:  pos.lat, lng: pos.lng});
-
-    //var myLatLng = new google.maps.LatLng({lat:  57.119234, lng: -2.138756});
-    directionsDisplay.setMap(map);
-    var request = {
-        origin:  myLatLng,
-        destination: 'Glasgow',
-        travelMode: google.maps.DirectionsTravelMode.DRIVING
-    };
-
-    directionsService.route(request, function(response, status) {
-        if (status == google.maps.DirectionsStatus.OK) {
-            directionsDisplay.setDirections(response);
-        }
-    });
-
-*/
 
 
 
