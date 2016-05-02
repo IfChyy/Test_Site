@@ -116,6 +116,7 @@ function initMap()
             directionsService.route(request, function(response, status) {
                 if (status == google.maps.DirectionsStatus.OK) { directionsDisplay.setDirections(response); } });
 
+ 
 */
 
             google.maps.event.addListener(tailmarker,'click', function(event)
