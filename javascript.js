@@ -59,9 +59,9 @@ function initMap()
                 service.nearbySearch(request,callback);
 
         //sipi  GAZ BATE
-            var mylatlng = new google.maps.LatLng(pos.lat, pos.lng);
-            var lat = mylatlng.lat();
-            var lng = mylatlng.lng();
+         //   var mylatlng = new google.maps.LatLng(pos.lat, pos.lng);
+           // var lat = mylatlng.lat();
+           // var lng = mylatlng.lng();
 
             function find_closest_marker( lat, lng ) {
                 var pi = Math.PI;
@@ -70,8 +70,8 @@ function initMap()
                 var closest = -1;
 
                 for( i=0;i<markers.length; i++ ) {
-                    var lat2 = markers[i].position.lat();
-                    var lon2 = markers[i].position.lng();
+                    var lat2 = pos.lat;
+                    var lon2 = pos.lng;
 
                     var chLat = lat2-lat;
                     var chLon = lon2-lng;
