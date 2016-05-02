@@ -1,7 +1,7 @@
 /*Changing the background of the page*/
 body {
 	background-size:cover;
-	background-image:url(black.jpg);
+	background-image:url(background1.jpg);
 	background-repeat: no-repeat;
 }
 
@@ -25,13 +25,25 @@ img {
 #text1{
 	margin: 48px 0px 32px 32px;
 	font-family:"Helvetica", Arial, sans-serif;
-	color: white;
 	font-size: 24px;
 }
 
 /*Leaving some space between the logo and the warning message*/
 #warning{
-	margin-top: 3%;
+	background-image:url(background2.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+
+	border: 3px solid darkgoldenrod;
+	border-radius: 25px;
+	height: 65%;
+	width: 95%;
+	float: inherit;
+	margin:0 0 8% 2%;
+	margin-top: 1%;
+	margin-bottom: 3%;
+	color: white;
 	text-align: center;
 }
 
