@@ -59,8 +59,11 @@ function initMap()
                 service.nearbySearch(request,callback);
 
         //sipi  GAZ BATE
+            var mylatlng = new google.maps.LatLng(pos.lat, pos.lng);
+            var lat = mylatlng.lat();
+            var lng = mylatlng.lng();
 
-            function find_closest_marker( lat1, lon1 ) {
+            function find_closest_marker( lat, lon ) {
                 var pi = Math.PI;
                 var R = 6371; //equatorial radius
                 var distances = [];
