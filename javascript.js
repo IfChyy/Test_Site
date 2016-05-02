@@ -89,7 +89,6 @@ function initMap()
 
 
         google.maps.event.addListener(marker, 'click', function() {
-            infowindow = new google.maps.InfoWindow({map: map,position: pos,content: 'You Are Here'});
             infowindow.setContent(place.name);
             infowindow.open(map, this);
         });
