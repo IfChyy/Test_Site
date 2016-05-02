@@ -52,11 +52,7 @@ function initMap()
                 yourPosition = new google.maps.InfoWindow({map: map,position: pos,content: 'You Are Here'});
 
                 var request = {location:pos,radius:2500,types: ['bar']};
-
-
-                var neshto = request.location;
-
-
+            
 
                 map.setCenter(pos);
 
@@ -126,7 +122,7 @@ function initMap()
             directionsDisplay.setMap(map);
             var request = {
                 origin:  {lat:  pos.lat, lng: pos.lng},
-                destination: {lat:  neshto.lat, lng: neshto.lng},
+                destination: 'Aberdeen',
                 travelMode: google.maps.DirectionsTravelMode.DRIVING
             };
 
