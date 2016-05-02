@@ -27,6 +27,7 @@ var infowindow;
 var yourPosition;
 
 
+
 function initMap()
 {
 
@@ -59,9 +60,9 @@ function initMap()
                 service.nearbySearch(request,callback);
 
         //sipi  GAZ BATE
-         //   var mylatlng = new google.maps.LatLng(pos.lat, pos.lng);
-           // var lat = mylatlng.lat();
-           // var lng = mylatlng.lng();
+            var mylatlng = new google.maps.LatLng(pos.lat, pos.lng);
+            var lat = mylatlng.lat();
+            var lng = mylatlng.lng();
 
             function find_closest_marker( lat, lng ) {
                 var pi = Math.PI;
@@ -69,9 +70,9 @@ function initMap()
                 var distances = [];
                 var closest = -1;
 
-                for( i=0;i<markers.length; i++ ) {
-                    var lat2 = pos.lat;
-                    var lon2 = pos.lng;
+                for( i=0;i<results.length; i++ ) {
+                    var lat2 = results[i].position.lat();
+                    var lon2 = results[i].position.lng();
 
                     var chLat = lat2-lat;
                     var chLon = lon2-lng;
@@ -94,7 +95,7 @@ function initMap()
                 }
 
                 // (debug) The closest marker is:
-                console.log(markers[closest]);
+                console.log(results[closest]);
             }
 
 
