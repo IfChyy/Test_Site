@@ -24,6 +24,7 @@ window.fbAsyncInit = function() {
 var map;
 var pos;
 var infowindow;
+var yourPosition;
 
 
 function initMap()
@@ -47,6 +48,7 @@ function initMap()
                 };
 
                 infowindow = new google.maps.InfoWindow({map: map,position: pos,content: 'You Are Here'});
+                yourPosition = new google.maps.InfoWindow({map: map,position: pos,content: 'You Are Here'});
 
                 var request = {location:pos,radius:2500,types: ['bar']};
 
