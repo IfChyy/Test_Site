@@ -101,11 +101,11 @@ function initMap()
     var directionsService = new google.maps.DirectionsService();
     var directionsDisplay = new google.maps.DirectionsRenderer();
 
-    //myLatLng = new google.maps.LatLng({lat:  pos.lat, lng: pos.lng});
+    var myLatLng = new google.maps.LatLng({lat:  pos.lat, lng: pos.lng});
 
     directionsDisplay.setMap(map);
     var request = {
-        origin:  new google.maps.LatLng({lat:  pos.lat, lng: pos.lng}),
+        origin:  myLatLng,
         destination: 'Glasgow',
         travelMode: google.maps.DirectionsTravelMode.DRIVING
     };
