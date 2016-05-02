@@ -47,8 +47,8 @@ function initMap()
                     lng: position.coords.longitude
                 };
 
-                infowindow = new google.maps.InfoWindow({map: map,position: pos,content: 'You Are Here'});
-                //yourPosition = new google.maps.InfoWindow({map: map,position: pos,content: 'You Are Here'});
+                //infowindow = new google.maps.InfoWindow({map: map,position: pos,content: 'You Are Here'});
+                yourPosition = new google.maps.InfoWindow({map: map,position: pos,content: 'You Are Here'});
 
                 var request = {location:pos,radius:2500,types: ['bar']};
 
