@@ -52,7 +52,6 @@ function initMap()
                 yourPosition = new google.maps.InfoWindow({map: map,position: pos,content: 'You Are Here'});
 
                 var request = {location:pos,radius:2500,types: ['bar']};
-            
 
                 map.setCenter(pos);
 
@@ -64,7 +63,7 @@ function initMap()
 
 
 
-            /**
+
         //sipi  GAZ BATE
             var mylatlng = new google.maps.LatLng(pos.lat, pos.lng);
             var lat = mylatlng.lat();
@@ -106,8 +105,7 @@ function initMap()
 
 
 
-
-*/
+            
 
 
 
