@@ -23,7 +23,7 @@ window.fbAsyncInit = function() {
 
 var map;
 var pos;
-var infowindow;
+var infowindow = new google.maps.InfoWindow();;
 var yourPosition;
 
 
